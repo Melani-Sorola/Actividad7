@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -21,7 +21,8 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function group() {
-        return $this->belongsTo(\App\Models\Group::class);
+    public function group()
+    {
+        return $this->belongsTo(Group::class);
     }
 }

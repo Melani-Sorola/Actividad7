@@ -1,5 +1,7 @@
 <?php
 
+namespace Database\Seeders;
+
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -7,10 +9,10 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call([
-            GroupsTableSeeder::class,
+            UsersTableSeeder::class,
             RoboticsKitsTableSeeder::class,
             CoursesTableSeeder::class,
-            UsersTableSeeder::class,
+            GroupsTableSeeder::class, // aquí debe coincidir exactamente con el nombre de la clase
         ]);
     }
 }
